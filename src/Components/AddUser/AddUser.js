@@ -8,7 +8,7 @@ const AddUser = () => {
 
                     const user = { name, email };
 
-                    fetch('', {
+                    fetch('http://localhost:5000/user', {
                               method: 'POST',
                               headers: {
                                         'content-type': 'application/json'
@@ -17,7 +17,9 @@ const AddUser = () => {
                     })
 
                     .then(res => res.json())
-                    .then(data => console.log("success:", data))
+                    .then(data => {
+                              console.log("success:", data)
+                    })
           }
           return (
                     <div>
